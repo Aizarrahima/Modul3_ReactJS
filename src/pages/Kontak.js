@@ -4,7 +4,7 @@ class Kontak extends React.Component {
     render() {
         return (
             <div>
-                <h2>Ini Kontak</h2>
+                <h2 className="text-center">Ini Kontak</h2>
             </div>
         )
     }

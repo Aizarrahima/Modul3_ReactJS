@@ -1,20 +1,22 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Beranda from "./pages/Beranda";
 import TentangSaya from "./pages/TentangSaya";
 import Karya from "./pages/Karya";
 import Kontak from "./pages/Kontak";
 import Gallery from "./pages/Gallery";
+import Cart from "./pages/Cart";
 
 const Utama = () => (
-    <Switch>
-        <Route exact path="/beranda" component={Beranda} />
-        <Route path="/tentangsaya" component={TentangSaya} />
-        <Route path="/karya" component={Karya} />
-        <Route path="/kontak" component={Kontak} />
-        <Route path="/gallery" component={Gallery} />
-    </Switch>
+    <Routes>
+        <Route path="/home" element={<Beranda/>} />
+        <Route path="/about" element={<TentangSaya/>} />
+        <Route path="/karya" element={<Karya/>} />
+        <Route path="/contact" element={<Kontak/>} />
+        <Route path="/gallery" element={<Gallery/>} />
+        <Route path="/cart" element={<Cart/>} />
+    </Routes>
 )
 
 export default Utama;
